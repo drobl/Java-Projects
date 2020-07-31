@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="controllers.IncomeCategoryDialogController" xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <Label text="Income category:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="categoryNameField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+
+    <Button fx:id="saveButton" text="Save" GridPane.columnIndex="0" GridPane.rowIndex="7" onAction="#saveIncomeCategory"/>
+    <Label visible="false" fx:id="errorMessage"
+           GridPane.columnIndex="0" GridPane.rowIndex="8"
+           GridPane.columnSpan="2"
+           style="-fx-text-fill: red;"
+    />
+</GridPane>

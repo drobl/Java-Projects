@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:controller="controllers.LoginSceneController" xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <Label text="Log in:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button text="Log in" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#tryLogin"/>
+    <Label visible="false" text="Invalid login credentials"
+           fx:id="invalidCredentials"
+           GridPane.columnIndex="0" GridPane.rowIndex="4"
+           style="-fx-text-fill: red;"
+    />
+    <Label text="Hint: Credentials for test user: maxmus maxmus123"
+      GridPane.columnIndex="0" GridPane.rowIndex="5"
+      style="-fx-text-fill: grey; -fx-font-size: 10px;"
+    />
+</GridPane>

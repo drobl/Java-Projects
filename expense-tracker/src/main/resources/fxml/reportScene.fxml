@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:controller="controllers.ReportSceneController" xmlns:fx="http://javafx.com/fxml"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0"
+            prefWidth="849.0">
+    <children>
+        <AnchorPane layoutX="1100.0" layoutY="8.0" prefHeight="460.0" prefWidth="175.0">
+            <children>
+                <Button layoutX="27.0" layoutY="384.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="122.0"
+                        text="Show report" onAction="#showReport"/>
+                <ChoiceBox fx:id="chooseMode" layoutX="13.0" layoutY="39.0" prefWidth="150.0"
+                           onAction="#setReportPeriodMode"/>
+                <DatePicker fx:id="startDate" layoutX="13.0" layoutY="217.0" prefHeight="27.0" prefWidth="150.0"/>
+                <DatePicker fx:id="endDate" layoutX="13.0" layoutY="274.0" prefHeight="27.0" prefWidth="150.0"/>
+                <Label layoutX="15.0" layoutY="14.0" prefHeight="17.0" prefWidth="150.0" text="Choose mode:"/>
+                <Label layoutX="15.0" layoutY="200.0" prefHeight="17.0" prefWidth="150.0" text="Start date:"/>
+                <Label layoutX="15.0" layoutY="250.0" prefHeight="17.0" prefWidth="150.0" text="End date:"/>
+                <Label visible="false" text="Invalid date range."
+                       fx:id="invalidDate"
+                       layoutX="15.0" layoutY="300.0" prefHeight="17.0" prefWidth="150.0" style="-fx-text-fill: red;"
+                />
+            </children>
+        </AnchorPane>
+
+        <PieChart fx:id="incomePieChart" layoutX="400.0" layoutY="42.0" prefHeight="300.0" prefWidth="300.0"
+                  title="Income by type"/>
+        <PieChart fx:id="expensesPieChart" layoutX="750.0" layoutY="42.0" prefHeight="300.0" prefWidth="300.0"
+                  title="Expenses by type"/>
+        <BarChart fx:id="incomeExpensesBarChart" layoutX="14.0" layoutY="42.0" prefHeight="300.0" prefWidth="400.0"
+                  title="Income/Expenses">
+            <xAxis>
+                <CategoryAxis fx:id="xAxisIncExp" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxisIncExp" side="LEFT"/>
+            </yAxis>
+        </BarChart>
+
+        <BarChart fx:id="incomeBarChart" layoutX="14.0" layoutY="360.0" prefHeight="300.0" prefWidth="500.0"
+                  title="Income">
+            <xAxis>
+                <CategoryAxis fx:id="xAxisInc" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxisInc" side="LEFT"/>
+            </yAxis>
+        </BarChart>
+
+
+        <BarChart fx:id="expensesBarChart" layoutX="520.0" layoutY="360.0" prefHeight="300.0" prefWidth="500.0"
+                  title="Expenses">
+            <xAxis>
+                <CategoryAxis fx:id="xAxisExp" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxisExp" side="LEFT"/>
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>

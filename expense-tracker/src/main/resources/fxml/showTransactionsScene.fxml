@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="191.0" prefWidth="210.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.ShowTransactionsController">
+    <!-- TODO Add table -->
+    <children>
+        <Label fx:id="label1" layoutX="59.0" layoutY="40.0" text="Label" />
+    </children>
+</AnchorPane>

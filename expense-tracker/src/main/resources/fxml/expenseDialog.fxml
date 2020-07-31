@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="controllers.ExpenseDialogController" xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <Label text="Expense:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+    <Label text="Account:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ChoiceBox fx:id="accountChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <DatePicker fx:id="transactionDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="transactionAmountField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <ChoiceBox fx:id="expenseCategoryChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <TextField fx:id="transactionDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <Button fx:id="saveButton" text="Save" GridPane.columnIndex="0" GridPane.rowIndex="7" onAction="#saveExpense"/>
+    <Label visible="false" fx:id="errorMessage"
+           GridPane.columnIndex="0" GridPane.rowIndex="8"
+           GridPane.columnSpan="2"
+           style="-fx-text-fill: red;"
+    />
+</GridPane>
